@@ -1,6 +1,10 @@
 sudo: false
 language: generic
-script: ./autogen.sh && ./configure && make && make nonexp-regtest
+script: ./autogen.sh && ./configure && make --quiet && make --quiet check && make nonexp-regtest
+addons:
+  apt:
+    packages:
+    - libc6-dbg libc6-dbg:i386
 
 matrix:
   include:
