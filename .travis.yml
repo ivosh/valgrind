@@ -8,14 +8,14 @@ matrix:
       addons:
         apt:
           packages:
-            - gcc-7 g++-7 libc6-dbg libc6-dbg:i386
+            - gcc-7 g++-7 gdb libc6-dbg libc6-dbg:i386
           sources:
             - ubuntu-toolchain-r-test
     - env: COMPILER_NAME=clang CC=clang-3.8 CXX=clang++-3.8
       addons:
         apt:
           packages:
-            - clang-3.8 libc6-dbg libc6-dbg:i386
+            - clang-3.8 gdb libc6-dbg libc6-dbg:i386
           sources:
             - llvm-toolchain-precise
 
