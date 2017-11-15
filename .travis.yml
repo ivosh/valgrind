@@ -1,6 +1,6 @@
 sudo: false
 language: generic
-script: ./autogen.sh && ./configure && make --quiet && make --quiet check && make nonexp-regtest
+script: ./autogen.sh && ./configure && make --quiet && make --quiet check && make --quiet regtest
 
 matrix:
   include:
